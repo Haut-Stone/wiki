@@ -1,8 +1,7 @@
 <template>
-  <div class="home">
-    <nav>
-      <router-link to="/valkyria">女武神</router-link>
-    </nav>
+  <div class="stigmata">
+    stigmata
+    <router-view></router-view>
   </div>
 </template>
 
@@ -10,7 +9,7 @@
 // @ is an alias to /src
 
 export default {
-  name: 'home',
+  name: 'stigmata',
   components: {
     
   }
@@ -18,8 +17,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
-.home{
+.stigmata{
   width: rem(750);
   font-size: rem(16);
 }

@@ -1,25 +1,43 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import Home from './views/Home.vue'
+import Vue from 'vue';
+import Router from 'vue-router';
+import Home from './views/Home.vue';
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
-  mode: 'history',
+  mode: 'hash',
   base: process.env.BASE_URL,
   routes: [
     {
       path: '/',
+      redirect: '/home'
+    },
+    { //首页
+      path: '/home',
       name: 'home',
       component: Home
     },
-    {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+    { //女武神
+      path: '/valkyria',
+      name: 'valkyria',
+      component: () => import('./views/Valkyria/Valkyria.vue'),
+      children: [  //这里就是二级路由的配置
+        {
+          path: 'overview',
+          name: 'overview',
+          component: () => import('./views/Valkyria/Overview.vue'),
+        }
+      ]
+    },
+    { //圣痕
+      path: '/stigmata',
+      name: 'stigmata',
+      component: () => import('./views/Stigmata/Stigmata.vue')
+    },
+    { //武器
+      path: '/weapon',
+      name: 'weapon',
+      component: () => import('./views/Weapon/Weapon.vue')
     }
   ]
-})
+});

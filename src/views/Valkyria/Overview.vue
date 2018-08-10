@@ -1,8 +1,6 @@
 <template>
-  <div class="home">
-    <nav>
-      <router-link to="/valkyria">女武神</router-link>
-    </nav>
+  <div class="overview">
+    overview
   </div>
 </template>
 
@@ -10,7 +8,7 @@
 // @ is an alias to /src
 
 export default {
-  name: 'home',
+  name: 'overview',
   components: {
     
   }
@@ -18,8 +16,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
-.home{
+.overview{
   width: rem(750);
   font-size: rem(16);
 }
