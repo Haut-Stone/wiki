@@ -14,9 +14,9 @@ export default {
   computed: {
     starWidth () {
       if (this.star > 5) {
-        return '1.533rem'
+        return '0.75rem'
       } else {
-        return this.star / 5 * 1.533 + 'rem';
+        return this.star / 5 * 0.75 + 'rem';
       }
       
     }
@@ -26,9 +26,9 @@ export default {
 
 <style scoped lang="scss">
 .star{
-    width: 1.533rem;
-    height: .267rem;
+    width: rem(57.5);
+    height: rem(10);
     background: url('../../assets/images/star.png') no-repeat;
-    background-size: 1.533rem .267rem;
+    background-size: rem(57.5) rem(10);
 }
 </style>
