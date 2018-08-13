@@ -6,6 +6,7 @@ import axios from 'axios';
 
 Vue.config.productionTip = false;
 Vue.prototype.$http = axios;
+Vue.prototype.HOST = 'http://www.gamepaper.cn/';
 
 new Vue({
   router,

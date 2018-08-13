@@ -7,6 +7,7 @@ Vue.use(Router);
 export default new Router({
   mode: 'hash',
   base: process.env.BASE_URL,
+  linkActiveClass: 'active',
   routes: [
     {
       path: '/',
@@ -26,6 +27,26 @@ export default new Router({
           path: 'overview',
           name: 'overview',
           component: () => import('./views/Valkyria/Overview.vue'),
+        },
+        {
+          path: 'skill',
+          name: 'skill',
+          component: () => import('./views/Valkyria/Skill.vue'),
+        },
+        {
+          path: 'equipPro',
+          name: 'equipPro',
+          component: () => import('./views/Valkyria/EquipPro.vue'),
+        },
+        {
+          path: 'team',
+          name: 'team',
+          component: () => import('./views/Valkyria/Team.vue'),
+        },
+        {
+          path: 'raiders',
+          name: 'raiders',
+          component: () => import('./views/Valkyria/Raiders.vue'),
         }
       ]
     },
