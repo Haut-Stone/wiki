@@ -14,10 +14,10 @@ export default {
 
 <style scoped lang="scss">
 .nodata{
-    padding: .32rem;
-    font-size: .373rem;
+    padding: rem(12);
+    font-size: rem(14);
     img{
-      width: 8rem;
+      width: rem(300);
       display: block;
       margin:  0 auto;
     }
