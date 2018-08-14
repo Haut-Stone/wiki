@@ -70,7 +70,19 @@ export default new Router({
     { //圣痕
       path: '/stigmata',
       name: 'stigmata',
-      component: () => import('./views/Stigmata/Stigmata.vue')
-    }
+      component: () => import('./views/Stigmata/Stigmata.vue'),
+      children: [
+        {
+          path: ':type',
+          name: 'stigmataList',
+          component: () => import('./views/Stigmata/StigmataList.vue'),
+        },
+        {
+          path: 'stigmataDetail/:id',
+          name: 'stigmataDetail',
+          component: () => import('./views/Stigmata/Detail.vue'),
+        }
+      ]
+    },
   ]
 });
