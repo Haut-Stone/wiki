@@ -1,12 +1,10 @@
 <template>
   <div class="scrollMenu">
-    <div class="title" @click="_showArmorList">{{armorName}}</div>
-    <ul class="scrollNav">
-      <li><router-link to="/valkyria/overview">概览</router-link></li>
-      <li><router-link to="/valkyria/skill">技能</router-link></li>
-      <li><router-link to="/valkyria/equipPro">配装</router-link></li>
-      <li><router-link to="/valkyria/team">组队</router-link></li>
-      <li><router-link to="/valkyria/raiders">攻略</router-link></li>
+    <div class="title" v-if="navData && navData.hasMenu" @click="_showArmorList">{{armorName}}</div>
+    <ul class="scrollNav" v-if="navData">
+      <li v-for="menu in navData.navMenu" :key="menu.route">
+        <router-link :to="menu.route">{{menu.name}}</router-link>
+      </li>
     </ul>
   </div>
 </template>
@@ -15,7 +13,8 @@
 export default {
   name: 'ScrollMenu',
   props: {
-    armorName: {}
+    armorName: {},
+    navData: {}
   },
   methods: {
     _showArmorList() {

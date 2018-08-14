@@ -50,15 +50,27 @@ export default new Router({
         }
       ]
     },
+    { //武器
+      path: '/weapon',
+      name: 'weapon',
+      component: () => import('./views/Weapon/Weapon.vue'),
+      children: [
+        {
+          path: ':type',
+          name: 'weaponList',
+          component: () => import('./views/Weapon/WeaponList.vue'),
+        },
+        {
+          path: 'weaponDetail/:id',
+          name: 'weaponDetail',
+          component: () => import('./views/Weapon/Detail.vue'),
+        }
+      ]
+    },
     { //圣痕
       path: '/stigmata',
       name: 'stigmata',
       component: () => import('./views/Stigmata/Stigmata.vue')
-    },
-    { //武器
-      path: '/weapon',
-      name: 'weapon',
-      component: () => import('./views/Weapon/Weapon.vue')
     }
   ]
 });

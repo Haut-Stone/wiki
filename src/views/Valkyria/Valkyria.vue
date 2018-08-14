@@ -11,12 +11,14 @@
       ></ArmorList>
     </transition>
     <NavMenu 
-    :armorName="armorData.armorName" 
+    :armorName="armorData.armorName"
+    :navData="navData"
     @showArmorList="_showArmorList"
     ></NavMenu>
     <transition name="fade">
       <ScrollMenu 
       :armorName="armorData.armorName" 
+      :navData="navData"
       @showArmorList="_showArmorList" 
       v-show="scrollTop > 150"
       ></ScrollMenu>
@@ -53,7 +55,32 @@ export default {
           return queryParam.armorId;
         })()
       },
-      armorListShow: false
+      armorListShow: false,
+      navData: {
+        hasMenu: true,
+        navMenu: [
+          {
+            name: '概览',
+            route: '/valkyria/overview'
+          },
+          {
+            name: '技能',
+            route: '/valkyria/skill'
+          },
+          {
+            name: '配装',
+            route: '/valkyria/equipPro'
+          },
+          {
+            name: '组队',
+            route: '/valkyria/team'
+          },
+          {
+            name: '攻略',
+            route: '/valkyria/raiders'
+          }
+        ]
+      }
     };
   },
   created() {
