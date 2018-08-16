@@ -72,11 +72,9 @@ export default {
         }
         this.tempList = data;
         this._updateData(this.$route.params.type);
-        // console.log(data[1].stigSuitInfor)
       })
       .catch(error => {
-        // console.log(error);
-        router.push({ path: "/404" });
+        console.log(error);
       });
     },
     showDiv (LevelIndex) {

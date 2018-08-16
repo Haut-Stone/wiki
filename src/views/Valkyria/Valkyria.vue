@@ -118,7 +118,6 @@ export default {
         })
         .catch(error => {
           console.log(error);
-          router.push({ path: "/404" });
         });
     },
     // 获取滚动条高度

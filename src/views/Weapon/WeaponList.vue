@@ -87,7 +87,6 @@ export default {
       .catch(error => {
         console.log(error);
         console.log("error 已经被显示了");
-        this.$router.push({path: "/404"});
       });
     },
   },
