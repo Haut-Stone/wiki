@@ -5,7 +5,7 @@
 		<p>更多详情请关注微信公众号</p>
 		<p>崩坏3情报姬</p>
 	</div>
-    <img src="../assets/images/QRcode.jpg" alt="">
+    <img src="../assets/images/guanzhu.png" alt="">
   </div>
 </template>
 
@@ -44,6 +44,7 @@ export default {
 		width: rem(360);
 		display: block;
 		margin:  0 auto;
+		background: transparent;
 	}
 }
 </style>
