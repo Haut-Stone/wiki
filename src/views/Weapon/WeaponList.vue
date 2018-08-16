@@ -31,10 +31,10 @@ export default {
       next();
   },
   computed: {
-    index: function() {
+    index() {
       return this.indexData;
     },
-    typeNum: function () {
+    typeNum() {
       if(this.type === 'knife'){
         return 1;
       }

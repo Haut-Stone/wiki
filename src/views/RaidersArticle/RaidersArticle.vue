@@ -41,7 +41,6 @@ export default {
   },
   mounted() {
     window.addEventListener("scroll", this._handleScroll);
-    router.push({ path: "/raidersArticle/activityGuide" });
 	},
 	methods: {
     // 获取滚动条高度

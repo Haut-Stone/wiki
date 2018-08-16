@@ -79,13 +79,13 @@ export default {
         router.push({ path: "/404" });
       });
     },
-    showDiv:function(LevelIndex){
+    showDiv (LevelIndex) {
       this.showIndex=LevelIndex;
     },
-    toStigmata:function(id){
+    toStigmata (id) {
       this.$router.push({name:'stigmataDetail',params:{id:id}});
     },
-    _updateData: function (type) {
+    _updateData (type) {
       this.starList = [];
       if (type == "fiveStar") {
         this.starList[0] = this.tempList[0];
