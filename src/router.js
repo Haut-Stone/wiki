@@ -96,5 +96,10 @@ export default new Router({
         }
       ]
     },
+    { //404
+      path: '/404',
+      name: 'error404',
+      component: () => import('./views/Error404.vue')
+    },
   ]
 });

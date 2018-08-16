@@ -23,7 +23,7 @@
           </router-link>
         </div>
         <div class="pic goods">
-          <router-link to="/">
+          <router-link to="/404">
             <button class="enter_button"></button>
           </router-link>
         </div>
@@ -31,8 +31,8 @@
     </section>
     <footer class="footer">
       <router-link to="/raidersArticle/activityGuide">攻略文章</router-link>
-      <router-link to="/">最新活动</router-link>
-      <router-link to="/">关注我们</router-link>
+      <router-link to="/404">最新活动</router-link>
+      <router-link to="/404">关注我们</router-link>
     </footer>
   </div>
 </template>
