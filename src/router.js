@@ -84,5 +84,17 @@ export default new Router({
         }
       ]
     },
+    { //攻略文章
+      path: '/raidersArticle',
+      name: 'raidersArticle',
+      component: () => import('./views/RaidersArticle/RaidersArticle.vue'),
+      children: [
+        {
+          path: ':type',
+          name: 'raidersArticleList',
+          component: () => import('./views/RaidersArticle/RaidersArticleList.vue'),
+        }
+      ]
+    },
   ]
 });

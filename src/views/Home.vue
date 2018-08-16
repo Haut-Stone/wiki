@@ -30,7 +30,7 @@
       </div>
     </section>
     <footer class="footer">
-      <router-link to="/">攻略文章</router-link>
+      <router-link to="/raidersArticle">攻略文章</router-link>
       <router-link to="/">最新活动</router-link>
       <router-link to="/">关注我们</router-link>
     </footer>
