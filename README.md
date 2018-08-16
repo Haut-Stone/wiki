@@ -15,7 +15,7 @@ cnpm install
 下载完文件后就可以运行项目了，输入一下代码，项目将会在本地8080端口运行
 
 ```shell
-cnpm run dev
+cnpm run serve
 ```
 
 ## 前端代码规范
