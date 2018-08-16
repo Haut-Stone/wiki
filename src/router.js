@@ -84,5 +84,22 @@ export default new Router({
         }
       ]
     },
+    { //物品
+      path: '/item',
+      name: 'item',
+      component: () => import('./views/Item/item.vue'),
+      children: [
+        {
+          path: 'list/:type/:star',
+          name: 'itemList',
+          component: () => import('./views/Item/itemList.vue'),
+        },
+        {
+          path: 'detail/:id',
+          name: 'itemDetail',
+          component: () => import('./views/Item/itemDetail.vue')
+        }
+      ]
+    }
   ]
 });
