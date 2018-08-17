@@ -72,20 +72,18 @@ export default {
         }
         this.tempList = data;
         this._updateData(this.$route.params.type);
-        // console.log(data[1].stigSuitInfor)
       })
       .catch(error => {
-        // console.log(error);
-        router.push({ path: "/404" });
+        console.log(error);
       });
     },
-    showDiv:function(LevelIndex){
+    showDiv (LevelIndex) {
       this.showIndex=LevelIndex;
     },
-    toStigmata:function(id){
+    toStigmata (id) {
       this.$router.push({name:'stigmataDetail',params:{id:id}});
     },
-    _updateData: function (type) {
+    _updateData (type) {
       this.starList = [];
       if (type == "fiveStar") {
         this.starList[0] = this.tempList[0];

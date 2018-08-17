@@ -100,6 +100,23 @@ export default new Router({
           component: () => import('./views/Item/itemDetail.vue')
         }
       ]
-    }
+    },
+    { //攻略文章
+      path: '/raidersArticle',
+      name: 'raidersArticle',
+      component: () => import('./views/RaidersArticle/RaidersArticle.vue'),
+      children: [
+        {
+          path: ':type',
+          name: 'raidersArticleList',
+          component: () => import('./views/RaidersArticle/RaidersArticleList.vue'),
+        }
+      ]
+    },
+    { //404
+      path: '/404',
+      name: 'error404',
+      component: () => import('./views/Error404.vue')
+    },
   ]
 });

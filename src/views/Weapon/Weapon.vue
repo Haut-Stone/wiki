@@ -60,7 +60,6 @@ export default {
   },
   mounted() {
     window.addEventListener("scroll", this._handleScroll);
-    router.push({ path: "/weapon/gun" });
   },
   methods: {
     // 获取滚动条高度

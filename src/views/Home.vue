@@ -11,14 +11,14 @@
           </router-link>
         </div>
         <div class="pic weapon">
-          <router-link to="/weapon">
+          <router-link to="/weapon/gun">
             <button class="enter_button"></button>
           </router-link>
         </div>
       </div>
       <div class="hbox">
         <div class="pic stigmata">
-          <router-link to="/stigmata">
+          <router-link to="/stigmata/fiveStar">
             <button class="enter_button"></button>
           </router-link>
         </div>
@@ -30,9 +30,9 @@
       </div>
     </section>
     <footer class="footer">
-      <router-link to="/">攻略文章</router-link>
-      <router-link to="/">最新活动</router-link>
-      <router-link to="/">关注我们</router-link>
+      <router-link to="/raidersArticle/activityGuide">攻略文章</router-link>
+      <router-link to="/404">最新活动</router-link>
+      <router-link to="/404">关注我们</router-link>
     </footer>
   </div>
 </template>
