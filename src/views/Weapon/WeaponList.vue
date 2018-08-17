@@ -31,10 +31,10 @@ export default {
       next();
   },
   computed: {
-    index: function() {
+    index() {
       return this.indexData;
     },
-    typeNum: function () {
+    typeNum() {
       if(this.type === 'knife'){
         return 1;
       }
@@ -87,7 +87,6 @@ export default {
       .catch(error => {
         console.log(error);
         console.log("error 已经被显示了");
-        this.$router.push({path: "/404"});
       });
     },
   },

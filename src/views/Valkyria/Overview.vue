@@ -222,7 +222,6 @@ export default {
       })
       .catch(error => {
         console.log(error);
-        router.push({ path: "/404" });
       });
     },
     // 初始化图表
