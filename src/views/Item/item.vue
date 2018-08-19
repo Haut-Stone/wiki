@@ -3,7 +3,7 @@
     <div class="item-wrapper">
       <!-- 顶部标题 -->
       <header>
-        <div class="menu" @click="goHome"></div>
+        <div class="menu" @click="goBack()"></div>
         <h2>材料库</h2>
       </header>
       <!-- 搜索和过滤工具路由导航 -->
@@ -71,9 +71,11 @@ export default {
     }
   },
   methods: {
-    // 返回主页面
-    goHome () {
-      this.$router.push('/home')
+    // 返回上一个页面
+    goBack () {
+      window.history.length > 1
+        ? this.$router.go(-1)
+        : this.$router.push('/')
     },
     // 相应滑动
     _handleScroll() {
@@ -213,9 +215,11 @@ export default {
     z-index: 2;
     height: 100%;
     width: 100%;
+    visibility: hidden;
   }
   .mask.active {
     background-color: #07070738;
+    visibility: visible;
   }
 
   .func-bar {
@@ -355,7 +359,7 @@ export default {
         height: rem(28);
         width: rem(75);
         background-color: #1c2b42;
-        border-radius: 6px;
+        border-radius: rem(4);
         background-color: #DCDDDE;
         transition: all .25s ease-in-out;
         color: #707886;
