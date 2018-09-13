@@ -3,7 +3,7 @@
     <div class="item-info">
       <div class="item-info-left">
         <div class="item-icon-border">
-          <div class="item-icon-icon" :style="{backgroundImage: 'url('+ detail.icon + ')'}"></div>
+          <div class="item-icon-icon" :style="{backgroundImage: 'url('+ this.HOST + detail.icon + ')'}"></div>
           <div class="item-icon-star" :class="{one: detail.star==1, two: detail.star==2, three: detail.star==3, four: detail.star==4, five: detail.star==5}"></div>
         </div>
       </div>
@@ -46,7 +46,7 @@ export default {
         info2: "大量的月光破片结合成的结晶，在结晶中间仿佛可以看到淡绿色的月牙",
         star: 1,
         typeName: "曜日材料",
-        icon: "http://115.159.89.91:8070/Picture/Material/5007/Icon.png",
+        icon: "Picture/Material/5007/Icon.png",
         access: "后期终端（30级以上可购买），曜日活动-周一，分解部分初始三星武器（降临武器除外），舰团-保税仓库发布",
         remark: "" 
       }
@@ -60,12 +60,29 @@ export default {
       // 比较棘手，待解决
     },
     changeDetail() {
+      this._initDetail()
       this._replaceCommaToEnter();
+    },
+    _initDetail() {
+      this.$http.get(this.HOST + "Wiki/Material/MaterialDeatial/" + this.$route.params.id,
+        {
+          before(request) {
+            if (this.previousRequest) {
+              this.previousRequest.abort();
+            }
+            this.previousRequest = request;
+          }
+        })
+        .then(response => {
+          this.detail = Object.assign({}, this.deatil, JSON.parse(response.data));
+        })
+        .catch(error => {
+          console.log(error);
+        });
     }
   },
   updated() {
     console.log("更新了");
-    this.changeDetail();
   },
   created() {
     console.log("创建了");
