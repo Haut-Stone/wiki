@@ -35,7 +35,7 @@
                   <div class="title">
                     <span class="name">{{subSkill.skillName}}</span>
                     <span class="level" v-if="subSkill.unlockGrade">解锁等级</span>
-                    <span class="levelNum" v-if="subSkill.unlockGrade">LV.{{subSkill.unlockGrade}}</span>
+                    <span class="levelNum" v-if="subSkill.unlockGrade">{{subSkill.unlockGrade}}</span>
                   </div>
                   <p>{{subSkill.skillIntro}}</p>
                 </div>

@@ -60,7 +60,7 @@ export default {
     margin-bottom: .187rem;
     h2{
         flex: 1;
-        font-size: .427rem;
+        font-size: .25rem;
         font-weight: bold;
     }
     .fitLine{
