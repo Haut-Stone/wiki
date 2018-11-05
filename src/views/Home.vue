@@ -31,7 +31,7 @@
     </section>
     <footer class="footer">
       <router-link to="/raidersArticle/activityGuide">攻略文章</router-link>
-      <router-link to="/404">最新活动</router-link>
+      <router-link to="/newActivity">最新活动</router-link>
       <router-link to="/404">关注我们</router-link>
     </footer>
   </div>

@@ -113,6 +113,11 @@ export default new Router({
         }
       ]
     },
+    { // 最新活动
+      path: '/newActivity',
+      name: 'newActivity',
+      component: () => import('./views/NewActivity/NewActivity.vue'),
+    },
     { //404
       path: '/404',
       name: 'error404',
