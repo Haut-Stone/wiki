@@ -78,7 +78,7 @@ export default {
     }
   },
   created() {
-    // this._initIndex();
+    this._initIndex();
   },
   mounted() {
     window.addEventListener("scroll", this._handleScroll);
@@ -97,7 +97,7 @@ export default {
     },
     _initIndex() {
       this.newsData = [];
-      this.$http.get(this.HOST + "", {
+      this.$http.get(this.HOST + 'Wiki/Article/classify(classifyName="最新活动")', {
         before(request) {
           if (this.previouseRequest) {
             this.previouseRequest.abort();
@@ -107,7 +107,7 @@ export default {
       })
       .then(response => {
         var data = JSON.parse(response.data);
-        this.newsData = Object.assign({}, this.newsData, data.guides);
+        this.newsData = Object.assign({}, this.newsData, data);
         // console.log(this.list);
       })
       .catch(error => {
